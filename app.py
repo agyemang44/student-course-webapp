@@ -36,3 +36,11 @@ def delete_student(id):
     conn.commit()
     conn.close()
     return redirect('/')
+
+@app.route('/search')
+def search():
+    query = request.args.get('q', '')
+    conn = get_db_connection()
+    students = conn.execute('SELECT * FROM students WHERE full_name LIKE ?', ('%' + query + '%',)).fetchall()
+    conn.close()
+    return render_template('index.html', students=students, query=query)
