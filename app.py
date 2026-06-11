@@ -28,3 +28,11 @@ def add_student():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/delete/<int:id>')
+def delete_student(id):
+    conn = get_db_connection()
+    conn.execute('DELETE FROM students WHERE student_id = ?', (id,))
+    conn.commit()
+    conn.close()
+    return redirect('/')
