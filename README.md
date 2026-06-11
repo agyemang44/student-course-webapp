@@ -18,3 +18,5 @@ Simple Flask web application that displays students from a database and allows a
 
 ## What I Learned
 Flask routing, database connections, HTML forms, basic CRUD operations.
+
+Live demo: Run locally with 2 commands - pip install + python app. py
