@@ -20,3 +20,10 @@ Simple Flask web application that displays students from a database and allows a
 Flask routing, database connections, HTML forms, basic CRUD operations.
 
 Live demo: Run locally with 2 commands - pip install + python app. py
+
+## Features
+- View all registered students
+- Add new students via web form
+- Search students by name
+- Delete students from database
+- SQLite database integration
